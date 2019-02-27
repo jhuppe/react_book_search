@@ -6,7 +6,7 @@
 # Local set up
 ###### Ensure that all of the above technologies are available on your local machine
 1. Run `git clone https://github.com/jhuppe/react_book_search && cd react_book_search && yarn install`
-2. Start the app by `npm start`
+2. Start the app by `yarn start`
 ###### Ready! Go to: [http://localhost:3000](http://localhost:3000)
 
 ## To Do
