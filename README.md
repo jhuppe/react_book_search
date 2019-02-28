@@ -12,9 +12,9 @@
 ## To Do
 - [X] Search Bar
 - [X] Display API response
-- [ ] Handle Edge Cases
-- [ ] Error Messages
 - [ ] Responsive Design
+- [ ] Error Messages
+
 
 
 ## License

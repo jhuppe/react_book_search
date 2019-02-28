@@ -12,13 +12,13 @@
   position: relative;
   height: 185px;
   width: 335px;
-  background: white;
+  background: #fff9d0;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 2fr 1fr 1fr 1fr 2fr;
   color: gray;
   padding-right: 17px;
-  box-shadow: 2px 2px 4px 0px #697578;
+  box-shadow: 2px 2px 4px 2px #697578;
 
   img {
     position: absolute;
@@ -35,7 +35,7 @@
     font-weight: 700;
     align-self: center;
     margin-top: 8px;
-    color: #1f1c29
+    color: #1f1c29;
   }
 
 .author {
@@ -72,13 +72,6 @@
       filter: brightness(0.9);
     }
   }
-}
-
-.holderText {
-  font-weight: 500;
-  color: gray;
-  font-size: 15px;
-  margin-top: 40px;
 }
 
 @media only screen and (max-width: 500px) {

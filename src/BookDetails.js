@@ -11,7 +11,7 @@ const BookDetails = (props) => {
                     <img src={book.imageLinks.smallThumbnail || noImage} alt=""  />
                 }
                 <div className="title">{book.title}</div>
-                <div className="author">Author: {book.authors || 'N/A'}</div>
+                <div className="author">Author: {book.authors[0] || 'N/A'}</div>
                 <div className="publisher">Publisher: {book.publisher || 'N/A'}</div>
                 <a href={book.canonicalVolumeLink} target="_blank" rel="noopener noreferrer" className="bookLink">More Details</a>
         </div>

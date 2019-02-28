@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './styles/SearchBar.scss';
+import './styles/SearchBar.scss';
 
 export default class SearchBar extends Component {
     constructor(props) {
@@ -31,13 +31,13 @@ export default class SearchBar extends Component {
             <div className="search">
                 <h1>Book Search</h1>
                 <input className="search_field"
-                    placeholder="Enter author name or book title"
+                    placeholder="Enter author name or book title ..."
                     type="text"
                     maxLength="50"
                     value={this.state.value}
                     onChange={this.handleChange}
                 />
-                <button onClick={this.handleSubmit}>Submit</button>
+                <button onClick={this.handleSubmit} className="search_submit">Submit</button>
             </div>
         );
     }
