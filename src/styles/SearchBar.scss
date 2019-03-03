@@ -74,15 +74,15 @@ h1 {
   }
 
 @media only screen and (max-width: 500px) {
-  form {
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 25px);
+  .search {
+    grid-template-columns: repeat(3, 110px);
+    grid-template-rows: repeat(3, 30px);
 
-    h1 {
-      grid-column: 2/4;
-      justify-self: center;
-      font-size: 14px;
-      margin-right: 53px;
+  h1 {
+    grid-column: 2/4;
+    justify-self: center;
+    font-size: 14px;
+    margin-right: 53px;
     }
   }
 }
