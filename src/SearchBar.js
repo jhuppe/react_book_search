@@ -4,7 +4,7 @@ import './styles/SearchBar.scss';
 export default class SearchBar extends Component {
     constructor(props) {
         super(props);
-        this.state = { value: '' };
+        this.state = { searchQuery: '', errorMessage: false };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -12,21 +12,27 @@ export default class SearchBar extends Component {
 
 
     handleChange(e) {
-        this.setState({ value: e.target.value });
-    }
+        this.setState({ searchQuery: e.target.value });
+    };
 
     handleSubmit(e) {
 
-        if (this.state.searchTerm !== '') {
-            fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.value}`)
+        if (this.state.searchQuery !== '') {
+
+            fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.searchQuery}`)
                 .then((response) => response.json())
                 .then((data) => {
                     this.props.onSearchResult(data.items);
                 });
+            this.setState({ errorMessage: ''})
         }
-    }
+        else {
+            this.setState({ errorMessage: 'Error! Search parameter cannot be empty.' })
+        }
+    };
 
     render() {
+        if(this.state.errorMessage === '')
         return (
             <div className="search">
                 <h1>Book Search</h1>
@@ -34,11 +40,29 @@ export default class SearchBar extends Component {
                     placeholder="Enter author name or book title ..."
                     type="text"
                     maxLength="50"
-                    value={this.state.value}
+                    value={this.state.searchQuery}
+                    required = 'required'
                     onChange={this.handleChange}
                 />
-                <button onClick={this.handleSubmit} className="search_submit">Submit</button>
+                <button onClick={this.handleSubmit} className="search_submit">Search</button>
             </div>
-        );
+        )
+        else {
+            return (
+                <div className="search">
+                    <h1>Book Search</h1>
+                    <input className="search_field"
+                        placeholder="Enter author name or book title ..."
+                        type="text"
+                        maxLength="50"
+                        value={this.state.searchQuery}
+                        required='required'
+                        onChange={this.handleChange}
+                    />
+                    <button onClick={this.handleSubmit} className="search_submit">Search</button>
+                    <div className="error_message">{this.state.errorMessage}</div>
+                </div>               
+            )
+        }
     }
 }

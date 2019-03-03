@@ -12,8 +12,9 @@
 ## To Do
 - [X] Search Bar
 - [X] Display API response
+- [X] Error Messages
 - [ ] Responsive Design
-- [ ] Error Messages
+
 
 
 
