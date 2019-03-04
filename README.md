@@ -15,7 +15,7 @@
 - [X] Search Bar
 - [X] Display API response
 - [X] Error Messages
-- [ ] Responsive Design
+- [X] Responsive Design
 
 
 
