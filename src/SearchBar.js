@@ -24,7 +24,7 @@ export default class SearchBar extends Component {
                 .then((data) => {
                     this.props.onSearchResult(data.items);
                 });
-            this.setState({ errorMessage: ''})
+            this.setState({ errorMessage: '' })
         }
         else {
             this.setState({ errorMessage: 'Error! Search parameter cannot be empty.' })
@@ -32,21 +32,21 @@ export default class SearchBar extends Component {
     };
 
     render() {
-        if(this.state.errorMessage === '')
-        return (
-            <div className="search">
-                <h1>Book Search</h1>
-                <input className="search_field"
-                    placeholder="Enter author name or book title ..."
-                    type="text"
-                    maxLength="50"
-                    value={this.state.searchQuery}
-                    required = 'required'
-                    onChange={this.handleChange}
-                />
-                <button onClick={this.handleSubmit} className="search_submit">Search</button>
-            </div>
-        )
+        if (this.state.errorMessage === '')
+            return (
+                <div className="search">
+                    <h1>Book Finder</h1>
+                    <input className="search_field"
+                        placeholder="Enter author name or book title ..."
+                        type="text"
+                        maxLength="50"
+                        value={this.state.searchQuery}
+                        required='required'
+                        onChange={this.handleChange}
+                    />
+                    <button onClick={this.handleSubmit} className="search_submit">Search</button>
+                </div>
+            )
         else {
             return (
                 <div className="search">
@@ -61,7 +61,7 @@ export default class SearchBar extends Component {
                     />
                     <button onClick={this.handleSubmit} className="search_submit">Search</button>
                     <div className="error_message">{this.state.errorMessage}</div>
-                </div>               
+                </div>
             )
         }
     }

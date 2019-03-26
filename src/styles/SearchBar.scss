@@ -2,17 +2,15 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 150px);
-  grid-template-rows: repeat(3, 35px);
   justify-content: center;
-  background-color: #909b9e;
 }
 
 h1 {
-    font-weight: 700;
-    color: rgb(29, 29, 29);
+    font-weight: 800;
+    color: white;
     grid-column: 2/3;
     justify-self: end;
-    font-size: 17px;
+    font-size: 20px;
   }
 
   .search_field {
@@ -69,7 +67,7 @@ h1 {
     grid-column: 1/5;
     justify-self: center;
     align-self: end;
-    font-size: 15px;
+    font-size: 18px;
     color: #f31d1d;
   }
 
